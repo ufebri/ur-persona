@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package semicolon.dev.yourpersona.presentation;
 
 import android.Manifest
