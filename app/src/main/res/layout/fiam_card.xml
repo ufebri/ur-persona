@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimens_16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            style="@style/FiamUI.Card.ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="360dp"
+            android:minHeight="360dp"
+            tools:ignore="ContentDescription"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/FiamUI.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="center"
+            tools:text="Dapatkan Perlindungan Maksimal" />
+
+        <TextView
+            android:id="@+id/tv_body"
+            style="@style/FiamUI.ModalBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:maxLines="2"
+            android:textAlignment="center"
+            tools:text="Sekarang Agen BRILink dapat melayani “Tarik Tunai Tanpa Kartu Pakai BRIMO”" />
+
+        <Button
+            android:id="@+id/btn_cta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_16dp"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/dimens_16dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            tools:text="Pelajari Selengkapnya" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

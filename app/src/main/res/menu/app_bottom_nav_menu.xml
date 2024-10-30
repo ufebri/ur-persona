@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_cek_khodam"
+        android:icon="@drawable/baseline_badge_24"
+        android:title="@string/khodam" />
+
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/baseline_history_edu_24"
+        android:title="@string/history" />
+</menu>
