@@ -1,0 +1,125 @@
+package semicolon.dev.yourpersona.model
+
+import febri.uray.bedboy.core.domain.model.User
+import kotlin.random.Random
+
+object KhodamMapper {
+
+    val funnyNames = listOf(
+        "Yuni-chan Pemakan Lontong",
+        "Ria-san Tukang Baper",
+        "Broto-kun Si Jago Mabar ML",
+        "Akbar-sensei Tukang Nasi Padang",
+        "Sari-sama Tersedak Boba",
+        "Alfi-chan Si Pecinta Kucing",
+        "Ayam-ninja Tanpa Tulang",
+        "Tofu-sensei Pembasmi Pedas",
+        "Warteg-maru Berjiwa Ramen",
+        "Miya-senpai Tukang Ghibah",
+        "Udin-dono Si Penggoda Cilor",
+        "Kecap-sensei Tukang Curhat",
+        "Otaku-kun Si Penghayal",
+        "Senin-chan Malas Bangun",
+        "Sate-baka Si Tersundul Motor",
+        "Lontong-san Pemimpin Upacara",
+        "Boba-sama Penghancur Diet",
+        "Mangga-senpai Tukang Gombal",
+        "Nasgor-kun Si Kejuaraan Level Pedas",
+        "Bakso-sama Si Ngemil Tengah Malam",
+        "Anime-kun Tukang Overthinking",
+        "Mie-ayam-sama Pemuja Kecap Manis",
+        "Sop-buntut-chan Tukang Ngantuk",
+        "Pecel-lele-sensei Si Jawara Ngiler",
+        "Indomie-sama Si Ahli Masak Malam",
+        "Baper-chan Si Drama Queen",
+        "Jomblo-kun Si Galau",
+        "Pedas-sama Tukang Ngisep Es Teh",
+        "Ramen-san Tukang Tersedak",
+        "Soto-ayam-kun Si Penguasa Jam Tidur",
+        "Martabak-sama Tukang Gosip Online",
+        "Kopi-hitam-san Si Anti Senyum",
+        "Jajan-pasar-chan Tukang Foto Estetik",
+        "Halu-sama Si Pemimpi Viral",
+        "Cincau-chan Si Gemes",
+        "Naruto-kun Si Pembasmi Hantu",
+        "Kurir-Gojek-san Tukang Ngobrol",
+        "Dagang-bakso-sama Si Overproud",
+        "Ucup-sensei Si Terusik",
+        "Kang-bakso-san Tukang Cod Rasa Baper",
+        "Wakanda-san Tukang Mimpi Jadi Sultan",
+        "Sate-Madura-sama Si Ambisius",
+        "Cendol-sensei Si Tukang Tirakat",
+        "Es-kepal-milo-sama Tukang Melow",
+        "Nasi-padang-kun Si Tukang Order Nasi Bungkus",
+        "Angkringan-sama Si Pengacau Malam",
+        "Bakpia-san Tukang Makan di Depan Orang",
+        "Cilor-sama Tukang Kirim Stiker",
+        "Susu-kurma-senpai Tukang Ngadu",
+        "Nasi-kuning-sama Si Tukang Gombal",
+        "Gorengan-san Si Pemuja Keripik",
+        "Bubur-tumpah-sama Si Tukang Ngaku-ngaku",
+        "Pentol-sama Tukang Ngobrol Ngaco",
+        "Cilok-san Si Tukang Pura-pura Lupa",
+        "Pecel-chan Si Tukang Ngedrama",
+        "Es-kosong-sama Tukang Ngajakin Main",
+        "Bajigur-sama Tukang Ngerap",
+        "Soto-makassar-kun Si Penghayal Cewek Bule",
+        "Sate-taichan-sama Si Tukang Baper Abis Makan Pedas",
+        "Gembul-san Si Tukang Nyemil",
+        "Seblak-sama Tukang Mewek Karena Pedas",
+        "Pangsit-san Tukang Pura-Pura Diet",
+        "Sushi-bakar-sama Si Tukang Ghibah Tentang Anime",
+        "Ketoprak-sama Si Tukang PHP",
+        "Batagor-sama Tukang Tidur Sampai Siang",
+        "Burger-nasi-san Tukang Mimpi",
+        "Pasta-pedes-kun Tukang Caper",
+        "Takoyaki-sama Tukang Baper Tanpa Sebab",
+        "Okonomiyaki-san Tukang Ngambek",
+        "Bakso-tenkatsu-sama Tukang Ngidam",
+        "Oden-kun Tukang Ngikutin Orang",
+        "Mendoan-sama Si Tukang Kaleng",
+        "Tahu-pedas-san Si Jago Ngeles",
+        "Lele-goreng-sama Si Ahli Ngendap",
+        "Lumpia-san Tukang Ngegas",
+        "Semur-jengkol-sama Tukang Cuek",
+        "Kopi-tubruk-san Tukang Gak Bisa Move On",
+        "Teh-tarik-sama Tukang Sok Lucu",
+        "Tempe-orak-san Si Tukang Panik",
+        "Kentang-balado-sama Tukang Ngedumel",
+        "Pasta-san Si Tukang Baper Kelas Berat",
+        "Katsu-ayam-sama Si Tukang Kangen",
+        "Gorengan-dono Tukang Ngidam Malam",
+        "Kebab-san Tukang Baper Tiap Malam",
+        "Pempek-chan Tukang Baper Tiba-Tiba",
+        "Roti-bakar-sama Si Pemuja Instagram",
+        "Pizza-teflon-san Si Tukang Ngaku-ngaku Viral",
+        "Spaghetti-gulung-sama Tukang Ngeluh",
+        "Dimsum-san Si Tukang Ngedumel Pelan-pelan",
+        "Kue-putu-sama Si Tukang Ghibah",
+        "Kang-tahu-san Tukang Mikirin Masa Depan",
+        "Sambel-teri-sama Si Tukang Mager",
+        "Burjo-kun Tukang Nyindir Halus",
+        "Boba-senpai Si Tukang Gombal Manis",
+        "Goreng-pisang-sama Si Jago Nyindir",
+        "Cireng-kun Tukang Sok Tegar",
+        "Teh-es-san Tukang Caper ke Mantan",
+        "Kerupuk-lempeng-sama Tukang Overdosis Cinta",
+        "Pasta-instan-san Tukang Makan Malam Tengah Malam",
+        "Singkong-goreng-sama Tukang Jajan Tengah Malam",
+        "Kupat-tahu-kun Tukang Ngambek"
+    )
+
+    fun randomKhodamName() = funnyNames[Random.nextInt(funnyNames.size)]
+
+    fun generateKhodam(input: List<User>): List<Menu> {
+        val mListData = ArrayList<Menu>()
+        input.map {
+            val menu = Menu(
+                idMenu = it.userID ?: 0,
+                nameMenu = String.format("%s \n %s", it.userKhodam, it.userKhodamDesc)
+            )
+            mListData.add(menu)
+        }
+        return mListData
+    }
+}
