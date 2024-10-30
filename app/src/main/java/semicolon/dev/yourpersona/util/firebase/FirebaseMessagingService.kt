@@ -99,6 +99,7 @@ class FirebaseMessagingService : FirebaseMessagingService() {
         // Set Sound
         val soundUri: Uri = Uri.parse("android.resource://${packageName}/${R.raw.man_high_sounds}")
 
+        @Suppress("DEPRECATION")
         RingtoneManager.getRingtone(applicationContext, soundUri)
             ?.setStreamType(RingtoneManager.TYPE_NOTIFICATION)
 

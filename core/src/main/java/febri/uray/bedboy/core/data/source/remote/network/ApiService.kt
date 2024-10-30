@@ -1,6 +1,5 @@
 package febri.uray.bedboy.core.data.source.remote.network
 
-import febri.uray.bedboy.core.data.source.remote.response.Candidates
 import febri.uray.bedboy.core.data.source.remote.response.RequestGemini
 import febri.uray.bedboy.core.data.source.remote.response.Responses
 import retrofit2.http.Body

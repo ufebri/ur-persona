@@ -32,8 +32,10 @@ fun FragmentActivity.sendNotification(title: String?, messageBody: String?) {
     val soundUri: Uri =
         Uri.parse("android.resource://" + applicationContext.packageName + "/" + R.raw.man_high_sounds)
 
+    @Suppress("DEPRECATION")
     RingtoneManager.getRingtone(applicationContext, soundUri)
         ?.setStreamType(RingtoneManager.TYPE_NOTIFICATION)
+
     val audioAttributes = AudioAttributes.Builder()
         .setUsage(AudioAttributes.USAGE_NOTIFICATION)
         .build()
