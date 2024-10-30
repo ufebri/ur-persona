@@ -26,6 +26,10 @@ jobs:
       - name: Decode google-services.json
         run: echo ${{ secrets.GOOGLE_SERVICES_JSON }} | base64 --decode > $GITHUB_WORKSPACE/app/google-services.json
 
+      # Step 3.1: Decode and save config
+      - name: Decode config.properties
+        run: echo ${{ secrets.CONFIG_PROPERTIES }} | base64 --decode > $GITHUB_WORKSPACE/config.properties
+
       # Step 4: Set up Gradle
       - name: Cache Gradle files
         uses: actions/cache@v3
